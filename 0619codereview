@@ -3,13 +3,13 @@
 		String homepageUrl = "http://"+req.getHeader("host")+req.getContextPath();
 		
 		String mailContents = "";
-        mailContents += "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">";
-        mailContents += "<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"kr\">";
-        mailContents += "<head>";
-        mailContents += "<title>해운거래정보센터</title>";
-        mailContents += "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />";
-        mailContents += "</head>";
-        mailContents += "<body>";
+        	mailContents += "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">";
+        	mailContents += "<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"kr\">";
+        	mailContents += "<head>";
+        	mailContents += "<title>해운거래정보센터</title>";
+        	mailContents += "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />";
+        	mailContents += "</head>";
+        	mailContents += "<body>";
 		mailContents += "	<div id=\"wrap\" style=\"width:100%; max-width:800px; margin:16px auto;\">";
 		mailContents += "		<div id=\"header\" style=\"width:100%; border-bottom:1px solid #213caf; padding:6px 0; margin:16px 0; content:\"\"; display:block; height:0; clear:both;\">";
 		mailContents += "			<div id=\"img_wrap\" style=\"display:inline-block; width:200px; margin:12px 0 0; vertical_align:bottom; float:left;\">";
@@ -51,8 +51,8 @@
 		mailContents += "			<img src=\""+homepageUrl+"/resources/images/logo_f.png\" alt=\"해운거래정보센터\" />";
 		mailContents += "		</div>";
 		mailContents += "	</div>";
-        mailContents += "</body>";
-        mailContents += "</html>";
+        	mailContents += "</body>";
+        	mailContents += "</html>";
         
 		return ws.KRS_MailSend2("meic", "meic@krs.co.kr", (String)param.get("EMAIL"), "", "", title, mailContents);
 	}
